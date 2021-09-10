@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+// CSS Variables
+:root {
+  --primary-color: #0071fe;
+  --error-color: #f23648;
+  --error-bg-color: #fddfe2;
+  --success-color: #21a67a;
+  --success-bg-color: #e0eee4;
+}
+
+@import "abstracts/index";
+@import "atoms/index";
+@import "templates/index";
+@import "components/index";
+@import "vendors/index";
+
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+
+  &::before, &::after {
+    box-sizing: inherit;
+  }
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: $app-background;
+  color: $app-font-color;
+  font-family: $app-font-family;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  background: #f7f7f7;
+  box-sizing: border-box;
+
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+#app {
+  min-height: 100vh;
+}
+
+// ________________________________________
+.data-placeholder {
+  display: flex;
+  justify-content: center;
+  margin: 22px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

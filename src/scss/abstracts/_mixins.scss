@@ -1,0 +1,53 @@
+@import "functions";
+@import "breakpoints";
+@import "variables";
+
+@mixin pseudo-background-x($color, $z-index: -1, $initialVisible: true) {
+  &::before,
+  &::after {
+    content: '';
+    background: $color;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: $z-index;
+    display: none;
+    @if ($initialVisible) {
+      display: flex;
+    }
+    @include set-breakpoint(smartphone, down) {
+      display: flex;
+    }
+  }
+
+  &::before {
+    left: -50%;
+    transform: translate(-50%);
+  }
+
+  &::after {
+    right: -50%;
+    transform: translate(50%);
+  }
+}
+
+@mixin appearence-none {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@mixin user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin user-select-initial {
+  -webkit-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}

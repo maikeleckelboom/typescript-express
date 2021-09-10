@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+    <title><%= title %></title>
+</head>
+<body>
+<div id="app">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main class="main">
+        <!--
+        -->
+        <div class="grid-container">
+            <div class="grid-x centered">
+                <div class="cell small-12">
+                    <div class="data-placeholder">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>name</th>
+                                <th>organization</th>
+                                <th>birth_year</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <% for(var i = 0; i < data.length; i++) { %>
+                                <tr>
+                                    <td><%= data[i].id %></td>
+                                    <td><%= data[i].name %></td>
+                                    <td><%= data[i].organization %></td>
+                                    <td><%= data[i].birth_year %></td>
+                                </tr>
+                            <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+         -->
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</div>
+</body>
+</html>
